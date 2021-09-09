@@ -1,7 +1,40 @@
-body 
-.header 
-    background-color: black
-    &__body
-    width: 90%
-    min-height: 400px
+@import "./_color.sass"
 
+body 
+    margin: 0 auto
+
+a
+    text-decoration: none
+
+.header 
+    width: 100%
+    min-height: 400px
+    background-color: $black-color  
+    &__body          
+        background-color: $red-color
+        display: flex
+        justify-content: center        
+        flex-direction: column
+    &__menu
+        min-height: 120px
+        display: flex
+        justify-content: space-around
+        align-items: center
+        flex-flow: row nowrap
+    &__imagestock
+        width: 10%
+        display: flex
+        justify-content: center
+        align-items: center
+        align-content: center
+    &__fandh
+        width: 20%
+        display: flex
+        justify-content: space-around
+        align-items: center
+        flex-flow: row nowrap
+
+
+                
+
+                
