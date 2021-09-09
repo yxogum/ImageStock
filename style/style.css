@@ -2,10 +2,41 @@ body {
   margin: 0 auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 .header {
-  background-color: black;
-  width: 90%;
+  width: 100%;
   min-height: 400px;
+  background-color: black;
+}
+.header__body {
+  background-color: #f50a0a;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.header__menu {
+  min-height: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+.header__imagestock {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.header__fandh {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row nowrap;
 }
 
 /*# sourceMappingURL=style.css.map */
