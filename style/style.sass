@@ -1,40 +1,76 @@
-@import "./_color.sass"
+
+@import "_mixin.sass"
 
 body 
     margin: 0 auto
 
 a
     text-decoration: none
+    color: $white
 
 .header 
-    width: 100%
-    min-height: 400px
-    background-color: $black-color  
-    &__body          
-        background-color: $red-color
-        display: flex
-        justify-content: center        
-        flex-direction: column
+    @include flex-center (100%, auto, 400px)
+    background-color: $black    
+    &__body 
+        @include flex-column(95%, auto, auto)
+        background-color: $red
     &__menu
-        min-height: 120px
-        display: flex
-        justify-content: space-around
-        align-items: center
-        flex-flow: row nowrap
+        @include space-around(100%, auto, 120px)        
     &__imagestock
-        width: 10%
-        display: flex
-        justify-content: center
-        align-items: center
-        align-content: center
+        @include flex-center(10%, auto, auto)
     &__fandh
-        width: 20%
-        display: flex
-        justify-content: space-around
-        align-items: center
-        flex-flow: row nowrap
+        @include space-around(20%, auto, auto)
+    &__search
+        @include flex-center(100%, auto, 140px)
+    &__line
+        @include flex-center(66%, auto, 2px)
+        background-color: rgb(255, 255, 255, 1)
+    &__row
+        @include space-around(100%, auto, 140px)
+.item-menu
+    @include space-around(100%, auto, auto)
+    &__title
+        font-size: 24px
+        line-height: 29px        
+.item-favourites
+    @include space-around(35%, auto, auto)
+    &__title
+        font-size: 18px
+        line-height: 21px
+.item-history
+    @include space-around(45%, auto, auto)
+    &__title
+        font-size: 18px
+        line-height: 21px                     
+.item-search
+    font-size: 72px
+    line-height: 86px
+
+.content
+    @include flex-center(100%, auto, 500px)    
+    &__body
+        @include flex-center(85%, auto, auto)
+    &__right
+        @include flex-column(96%, auto, auto)
+    &__top
+        @include space-around(5%, auto, 140px)
+    &__middle
+        @include flex-center(100%, auto, 3397px)
+    &__bottom
+        @include flex-center(5%, auto, auto)
+    &__left
+        @include flex-end(4%, auto, 3488px)
+
+// .picture
+    // &__left
+    //     @include flex-column(34%, auto, auto)
+        
+        // width: 34%
+        // display: flex
+        // justify-content: center
+        // align-items: center
+        // flex-flow: column wrap      
 
 
-                
-
-                
+    
+      
