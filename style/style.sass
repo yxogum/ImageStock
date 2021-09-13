@@ -6,14 +6,13 @@ body
 
 a
     text-decoration: none
-    color: $white
+    color: $white    
 
 .header 
     @include flex-center (100%, auto, 400px)
     background-color: $black    
     &__body 
         @include flex-column(95%, auto, auto)
-        background-color: $red
     &__menu
         @include space-around(100%, auto, 120px)        
     &__imagestock
@@ -21,12 +20,18 @@ a
     &__fandh
         @include space-around(20%, auto, auto)
     &__search
-        @include flex-center(100%, auto, 140px)
+        @include flex-center(83%, auto, 120px)
     &__line
-        @include flex-center(66%, auto, 2px)
-        background-color: rgb(255, 255, 255, 1)
+        @include flex-center(66%, 1px, auto)
+        border: 0.5px solid rgba(255, 255, 255, 1)       
     &__row
-        @include space-around(100%, auto, 140px)
+        @include space-around(75%, auto, 75px)
+    &__row a
+        font-size: 18px
+        line-height: 21px
+    // &__row a:nth-child(odd)
+    //     background: linear-gradient(90deg, rgba(0, 0, 0, 0) 7.36%, #000000 20.06%),linear-gradient(0deg, #FFFFFF, #FFFFFF)      
+        
 .item-menu
     @include space-around(100%, auto, auto)
     &__title
@@ -43,33 +48,78 @@ a
         font-size: 18px
         line-height: 21px                     
 .item-search
+    @include flex-center(80%, auto, auto)    
     font-size: 72px
     line-height: 86px
+    border: none
+    font-weight: normal
+    font-style: normal
+    background: none
+    color: #fff
+    outline: none
+    text-align: center
+
 
 .content
     @include flex-center(100%, auto, 500px)    
     &__body
         @include flex-center(85%, auto, auto)
-    &__right
-        @include flex-column(96%, auto, auto)
+    &__left
+        @include flex-column(96%, auto, 3320px)
     &__top
         @include space-around(5%, auto, 140px)
     &__middle
-        @include flex-center(100%, auto, 3397px)
+        @include flex-center(100%, auto, auto)
     &__bottom
         @include flex-center(5%, auto, auto)
-    &__left
-        @include flex-end(4%, auto, 3488px)
+    &__right
+        @include flex-end(4%, auto, 3265px)
 
-// .picture
-    // &__left
-    //     @include flex-column(34%, auto, auto)
-        
-        // width: 34%
-        // display: flex
-        // justify-content: center
-        // align-items: center
-        // flex-flow: column wrap      
+.picture
+    &__left
+        @include flex-column(33%, auto, auto)
+    &__left img:nth-child(1)
+        @include flex-center(95%, 260px, auto)
+    &__left img:nth-child(3)
+        @include flex-center(95%, 260px, auto)
+    &__left img:nth-child(5)
+        @include flex-center(95%, 260px, auto)
+    &__left img:nth-child(2)
+        @include flex-center(95%, 715px, auto)
+    &__left img:nth-child(4)
+        @include flex-center(95%, 476px, auto)
+    &__left img:nth-child(6)
+        @include flex-center(95%, 476px, auto)
+    &__left img:nth-child(7)
+        @include flex-center(95%, 709px, auto)
+    &__middle
+        @include flex-column(33%, auto, auto)
+    &__middle img:nth-child(1)
+        @include flex-center(95%, 715px, auto)
+    &__middle img:nth-child(3)
+        @include flex-center(95%, 715px, auto)   
+    &__middle img:nth-child(even)
+        @include flex-center(95%, 260px, auto)    
+    &__middle img:nth-child(5)
+        @include flex-center(95%, 476px, auto)   
+    &__middle img:nth-child(7)
+        @include flex-center(95%, 474px, auto) 
+    &__right 
+        @include flex-column(33%, auto, auto)
+    &__right img:nth-child(1)
+        @include flex-center(95%, 476px, auto)
+    &__right img:nth-child(2)
+        @include flex-center(95%, 715px, auto)    
+    &__right img:nth-child(3)
+        @include flex-center(95%, 260px, auto) 
+    &__right img:nth-child(4)
+        @include flex-center(95%, 475px, auto) 
+    &__right img:nth-child(5)
+        @include flex-center(95%, 260px, auto)     
+    &__right img:nth-child(6)
+        @include flex-center(95%, 715px, auto) 
+    &__right img:nth-child(7)
+        @include flex-center(95%, 260px, auto)     
 
 
     
