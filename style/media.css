@@ -1,4 +1,4 @@
-media_mixin.sass @media all and (max-width: 1809px) {
+@media all and (max-width: 1809px) {
   .header__body {
     width: 100%;
   }
