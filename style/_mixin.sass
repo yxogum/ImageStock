@@ -34,4 +34,10 @@ $gray: #888
     align-items: flex-end
     @include size($width, $height, $min-height)
     
-       
+@mixin text($font-size, $line-height, $text-decoration, $font-weight, $font-style)
+    font-size: $font-size
+    line-height: $line-height
+    text-decoration: $text-decoration
+    font-weight: $font-weight
+    font-style: $font-style
+          

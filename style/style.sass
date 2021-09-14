@@ -27,35 +27,29 @@ a
     &__row
         @include space-around(75%, auto, 75px)
     &__row a
-        font-size: 18px
-        line-height: 21px
-    // &__row a:nth-child(odd)
-    //     background: linear-gradient(90deg, rgba(0, 0, 0, 0) 7.36%, #000000 20.06%),linear-gradient(0deg, #FFFFFF, #FFFFFF)      
+        @include text(18px, 21px, none, normal, normal)    
         
 .item-menu
     @include space-around(100%, auto, auto)
     &__title
-        font-size: 24px
-        line-height: 29px        
+        @include text(24px, 29px, none, normal, normal)
+       
 .item-favourites
     @include space-around(35%, auto, auto)
     &__title
-        font-size: 18px
-        line-height: 21px
+        @include text(18px, 21px, none, normal, normal)   
+
 .item-history
     @include space-around(45%, auto, auto)
     &__title
-        font-size: 18px
-        line-height: 21px                     
+        @include text(18px, 21px, none, normal, normal)
+                    
 .item-search
-    @include flex-center(80%, auto, auto)    
-    font-size: 72px
-    line-height: 86px
+    @include flex-center(80%, auto, auto)
+    @include text(72px, 86px, none, normal, normal)
     border: none
-    font-weight: normal
-    font-style: normal
     background: none
-    color: #fff
+    color: $white
     outline: none
     text-align: center
 
@@ -75,11 +69,44 @@ a
     &__right
         @include flex-end(4%, auto, 3265px)
 
-.picture
+.author  
+    position: absolute   
+    opacity: 0
+    transition: 0.5s
+    z-index: -10
+    @include flex-center(225px, 225px, auto) 
+    margin: 220px 0px 0px 245px
+    &__body
+        @include flex-column(100%, auto, 200px)        
+    &__photo
+        @include flex-center(75px, auto, 75px) 
+        filter: none       
+    &__text
+        @include text(30px, 36px, none, normal, normal)
+        @include flex-center(100%, auto, 40px)
+        
+    &__option
+        @include space-around(70%, auto, 40px) 
+
+
+
+.picture    
     &__left
-        @include flex-column(33%, auto, auto)
-    &__left img:nth-child(1)
-        @include flex-center(95%, 260px, auto)
+        @include flex-column(33%, auto, auto)        
+    &__one
+        @include flex-center(96%, auto, auto)
+        overflow: hidden
+        position: relative 
+    &__one:hover >img
+        filter: blur(4px)
+        transition: 0.5s 
+    &__one:hover >.author
+        opacity: 1
+        transition: 0.5s
+        z-index: 10
+        transform: translate(-50%, -50%)
+    &__oneone
+        @include flex-center(490px, 260px, auto)
     &__left img:nth-child(3)
         @include flex-center(95%, 260px, auto)
     &__left img:nth-child(5)
